@@ -1,0 +1,20 @@
+{
+  "name": "quantai-trading-platform",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI-powered crypto trading platform with signals, portfolio tracking, and automated trading",
+  "scripts": {
+    "dev": "bun run server.ts",
+    "build": "bun run clear-cache && vite build",
+    "start": "bun run server.ts"
+  },
+  "dependencies": {
+    "lucide-react": "^0.400.0",
+    "hono": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "typescript": "^5.0.0",
+    "vite": "^5.0.0"
+  }
+}
