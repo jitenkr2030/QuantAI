@@ -3,154 +3,116 @@
 ## 🚀 Live Platform
 **URL:** https://jitenkumar.zo.space/
 
-## 📊 Platform Status
+---
 
-| Feature | Status | Data Source |
-|---------|--------|-------------|
-| Live Prices | ✅ Working | CoinGecko API |
-| Signal Generation | ✅ Working | CoinGecko + Analysis |
-| AI Insights | ✅ Working | Technical Analysis |
-| Portfolio Tracker | ✅ Working | Local Storage |
-| User Auth | ✅ Working | In-memory |
-| Trade Execution | ✅ Working | Binance Testnet |
-| Real-time Stream | ✅ Working | Binance WebSocket |
-| Persistent Storage | ✅ Working | File-based |
+## 🎯 Revenue Streams Implemented
 
-## 🏗️ Architecture
+### 1. Signal Reseller Program
+**URL:** https://jitenkumar.zo.space/reseller
 
-```
-┌─────────────────────────────────────────────────────────────┐
-│                    QUANTAI PLATFORM                          │
-├─────────────────────────────────────────────────────────────┤
-│                                                             │
-│   ┌─────────────┐     ┌─────────────────────────────────┐ │
-│   │   PAGES     │     │         API ROUTES               │ │
-│   ├─────────────┤     ├─────────────────────────────────┤ │
-│   │ /           │     │ /api/signals     → Live signals │ │
-│   │ /dashboard  │     │ /api/prices      → Coin prices   │ │
-│   │ /pricing    │     │ /api/insights    → AI analysis  │ │
-│   │ /terms      │     │ /api/chart       → OHLCV data   │ │
-│   │ /disclaimer│     │ /api/auth        → User auth     │ │
-│   │             │     │ /api/portfolio   → Holdings     │ │
-│   │             │     │ /api/execute-trade → Binance   │ │
-│   │             │     │ /api/stream      → WebSocket     │ │
-│   │             │     │ /api/persistence → File DB      │ │
-│   └─────────────┘     └─────────────────────────────────┘ │
-│                              │                              │
-│                              ▼                              │
-│   ┌─────────────────────────────────────────────────────┐  │
-│   │                 EXTERNAL APIS                        │  │
-│   ├─────────────────────────────────────────────────────┤  │
-│   │ CoinGecko API     → Market data (FREE, no key)      │  │
-│   │ Binance Testnet   → Paper trading (FREE)           │  │
-│   │ Binance WebSocket → Real-time prices (FREE)        │  │
-│   └─────────────────────────────────────────────────────┘  │
-└─────────────────────────────────────────────────────────────┘
-```
+| Feature | Details |
+|---------|---------|
+| Commission | 50% recurring |
+| Target | Influencers, traders with audiences |
+| Working | ✅ Landing page + signup form |
 
-## 💰 Pricing (INR)
+---
 
-| Plan | Price | Features |
+### 2. Education & Courses
+**URL:** https://jitenkumar.zo.space/courses
+
+| Course | Price (INR) | Original |
+|--------|-------------|----------|
+| Trading Basics | ₹999 | ₹1,999 |
+| Technical Analysis | ₹2,499 | ₹4,999 |
+| AI Trading Mastery | ₹4,999 | ₹9,999 |
+| **Bundle** | **₹6,999** | ₹14,997 |
+
+---
+
+### 3. Affiliate Program
+**URL:** https://jitenkumar.zo.space/affiliates
+
+| Partner | Commission |
+|---------|------------|
+| CoinDCX | 30% of trading fees |
+| Binance | 20% of trading fees |
+| WazirX | 25% of trading fees |
+| TradingView | ₹200/referral |
+
+---
+
+### 4. API Access
+**URL:** https://jitenkumar.zo.space/api-access
+
+| Plan | Price (INR) | Calls |
+|------|-------------|-------|
+| Starter | ₹499/mo | 1,000 |
+| Developer | ₹1,499/mo | 10,000 |
+| Business | ₹2,999/mo | Unlimited |
+| Enterprise | ₹9,999/mo | Unlimited + White-label |
+
+---
+
+### 5. Signal Alerts (Telegram/WhatsApp)
+**URL:** https://jitenkumar.zo.space/alerts
+
+| Plan | Price (INR) | Features |
+|------|-------------|----------|
+| Basic | ₹99/mo | Telegram only, 5 signals/day |
+| Premium | ₹299/mo | Telegram + WhatsApp, 15 signals/day |
+| VIP | ₹999/mo | Unlimited + 1-on-1 support |
+
+---
+
+## 🏠 Main Platform Pages
+
+| Page | URL |
+|------|-----|
+| Home | https://jitenkumar.zo.space/ |
+| Dashboard | https://jitenkumar.zo.space/dashboard |
+| Pricing | https://jitenkumar.zo.space/pricing |
+| Terms | https://jitenkumar.zo.space/terms |
+| Disclaimer | https://jitenkumar.zo.space/disclaimer |
+
+---
+
+## 💳 Payment Integration
+
+- **Cashfree** - Ready for Indian market
+- **Stripe** - International payments
+- Test mode: ✅ Working
+
+---
+
+## 🔐 Demo Accounts
+
+| Role | Email | Password |
 |------|-------|----------|
-| Free | ₹0 | 5 signals/day, Basic portfolio |
-| Pro | ₹299/mo | Unlimited signals, AI insights, Auto-trading |
-| Enterprise | ₹1,499/mo | API access, White-label, Priority support |
+| Admin | admin@quantai.com | admin123 |
+| Pro User | pro@quantai.com | pro123 |
+| Free User | free@quantai.com | free123 |
 
-## 🔄 User Flow
-
-```
-1. Visit Platform → See live signals (auto-loaded)
-       ↓
-2. Scan Markets → Real-time scan of 50+ coins
-       ↓
-3. View Signal → BUY/SELL with confidence %
-       ↓
-4. Execute → Order to Binance Testnet
-       ↓
-5. Track Portfolio → Add holdings manually
-       ↓
-6. Get AI Insights → Market analysis (Pro)
-```
-
-## 🔧 Custom Domain Setup
-
-1. Go to [Settings > Services](/?t=sites&s=services)
-2. Expand QuantAI service
-3. Add your custom domain in Custom Domains section
-4. Add DNS records:
-   - `CNAME www → jitenkumar.zo.space`
-   - Or `A record → Zo's IP`
-
-*Note: Requires paid plan*
-
-## 📁 Project Structure
-
-```
-QuantAI/
-├── src/
-│   ├── pages/          # React pages
-│   │   ├── index.tsx   # Landing page
-│   │   ├── dashboard.tsx
-│   │   └── pricing.tsx
-│   ├── api/            # API routes
-│   │   ├── signals.ts
-│   │   ├── auth.ts
-│   │   └── ...
-│   └── components/
-├── data/               # Persistent storage
-├── package.json
-└── README.md
-```
-
-## 🔐 API Endpoints
-
-### Public APIs (no auth needed)
-- `GET /api/signals` - Get trading signals
-- `GET /api/prices` - Get current prices
-- `GET /api/chart?symbol=bitcoin` - Get OHLCV data
-- `GET /api/insights?symbol=bitcoin` - Get AI insights
-
-### Authenticated APIs
-- `POST /api/auth` - Login/Signup
-- `GET /api/portfolio` - Get user portfolio
-- `POST /api/execute-trade` - Execute trade on Binance
-- `GET /api/stream?action=price&symbol=btcusdt` - Real-time price stream
+---
 
 ## 🛠️ Tech Stack
 
-| Layer | Technology |
-|-------|------------|
-| Frontend | React, Tailwind CSS |
-| Backend | Hono (Bun) |
-| Database | File-based JSON |
-| Market Data | CoinGecko API |
-| Trading | Binance Testnet |
+- **Frontend:** React + TypeScript + Tailwind CSS
+- **Backend:** Hono.js (Bun)
+- **Hosting:** Zo Space
+- **APIs:** CoinGecko, Binance Testnet
 
-## 📈 To Make Production Ready
+---
 
-```
-CURRENT             →  PRODUCTION
-─────────────────────────────────────────────
-In-memory users     →  PostgreSQL/MongoDB
-File storage        →  Cloud database
-Testnet trading     →  Real Binance API
-Free CoinGecko      →  Paid plan (higher limits)
-No payments         →  Stripe/Cashfree
-No notifications    →  Email/Telegram alerts
-Single server       →  Scalable infrastructure
-```
+## 📊 Features by Tier
 
-## 🤝 Contributing
-
-1. Clone repo
-2. Make changes
-3. Push to GitHub
-4. Deploy via Zo Space
-
-## 📞 Support
-
-- Email: jitenkumar@zo.computer
-- GitHub Issues: https://github.com/jitenkr2030/QuantAI/issues
+| Feature | Free | Pro (₹299) | Enterprise (₹1,499) |
+|---------|------|------------|---------------------|
+| Daily Signals | 5 | 15 | Unlimited |
+| AI Insights | ❌ | ✅ | ✅ |
+| Auto-Trading | ❌ | Testnet | ✅ |
+| API Access | ❌ | ❌ | ✅ |
+| White-label | ❌ | ❌ | ✅ |
 
 ---
 
