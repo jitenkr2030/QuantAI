@@ -1,163 +1,157 @@
 # QuantAI Trading Platform
 
-## Overview
-
-**QuantAI** is a SaaS AI trading platform that provides users with trading signals, AI-powered market insights, and automated trading tools. Users subscribe to different tiers to access premium features.
-
----
-
-## Live Platform
-
+## 🚀 Live Platform
 **URL:** https://jitenkumar.zo.space/
 
-### Pricing (INR)
-| Tier | Price | Features |
+## 📊 Platform Status
+
+| Feature | Status | Data Source |
+|---------|--------|-------------|
+| Live Prices | ✅ Working | CoinGecko API |
+| Signal Generation | ✅ Working | CoinGecko + Analysis |
+| AI Insights | ✅ Working | Technical Analysis |
+| Portfolio Tracker | ✅ Working | Local Storage |
+| User Auth | ✅ Working | In-memory |
+| Trade Execution | ✅ Working | Binance Testnet |
+| Real-time Stream | ✅ Working | Binance WebSocket |
+| Persistent Storage | ✅ Working | File-based |
+
+## 🏗️ Architecture
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    QUANTAI PLATFORM                          │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│   ┌─────────────┐     ┌─────────────────────────────────┐ │
+│   │   PAGES     │     │         API ROUTES               │ │
+│   ├─────────────┤     ├─────────────────────────────────┤ │
+│   │ /           │     │ /api/signals     → Live signals │ │
+│   │ /dashboard  │     │ /api/prices      → Coin prices   │ │
+│   │ /pricing    │     │ /api/insights    → AI analysis  │ │
+│   │ /terms      │     │ /api/chart       → OHLCV data   │ │
+│   │ /disclaimer│     │ /api/auth        → User auth     │ │
+│   │             │     │ /api/portfolio   → Holdings     │ │
+│   │             │     │ /api/execute-trade → Binance   │ │
+│   │             │     │ /api/stream      → WebSocket     │ │
+│   │             │     │ /api/persistence → File DB      │ │
+│   └─────────────┘     └─────────────────────────────────┘ │
+│                              │                              │
+│                              ▼                              │
+│   ┌─────────────────────────────────────────────────────┐  │
+│   │                 EXTERNAL APIS                        │  │
+│   ├─────────────────────────────────────────────────────┤  │
+│   │ CoinGecko API     → Market data (FREE, no key)      │  │
+│   │ Binance Testnet   → Paper trading (FREE)           │  │
+│   │ Binance WebSocket → Real-time prices (FREE)        │  │
+│   └─────────────────────────────────────────────────────┘  │
+└─────────────────────────────────────────────────────────────┘
+```
+
+## 💰 Pricing (INR)
+
+| Plan | Price | Features |
 |------|-------|----------|
-| Free | ₹0 | 5 signals/day, basic portfolio |
-| Pro | ₹299/mo | Unlimited signals, AI insights, advanced charts, auto-trading |
-| Enterprise | ₹1,499/mo | Everything in Pro + API access, white-label, priority support |
+| Free | ₹0 | 5 signals/day, Basic portfolio |
+| Pro | ₹299/mo | Unlimited signals, AI insights, Auto-trading |
+| Enterprise | ₹1,499/mo | API access, White-label, Priority support |
 
----
+## 🔄 User Flow
 
-## Features Implemented ✅
-
-### Tier-Based Access Control
-- Signal limits enforced (Free: 5, Pro: unlimited)
-- Tier-aware API responses
-- Upgrade prompts for free users
-
-### Core APIs
-| Endpoint | Method | Description |
-|----------|--------|-------------|
-| `/api/signals` | GET | Get trading signals (tier-limited) |
-| `/api/portfolio` | GET/POST | Portfolio tracker |
-| `/api/chart` | GET | Advanced price charts (Pro+) |
-| `/api/insights` | GET | AI market insights (Pro+) |
-| `/api/auto-trade` | GET/POST | Auto-trading setup (Pro+) |
-| `/api/enterprise` | GET/POST | API key management (Enterprise) |
-| `/api/auth` | POST | User authentication |
-| `/api/payments` | POST | Stripe payment integration |
-
-### Pages
-| Route | Description |
-|-------|-------------|
-| `/` | Landing page |
-| `/pricing` | Pricing plans (INR) |
-| `/dashboard` | Main trading dashboard |
-| `/terms` | Terms of Service |
-| `/disclaimer` | Risk Disclaimer |
-
----
-
-## API Details
-
-### Signals API
-```json
-GET /api/signals?tier=free
-{
-  "success": true,
-  "signals": [...],
-  "market": { "totalSignals": 5, "buySignals": 5, "sellSignals": 0 },
-  "tier": "free",
-  "limit": 5
-}
+```
+1. Visit Platform → See live signals (auto-loaded)
+       ↓
+2. Scan Markets → Real-time scan of 50+ coins
+       ↓
+3. View Signal → BUY/SELL with confidence %
+       ↓
+4. Execute → Order to Binance Testnet
+       ↓
+5. Track Portfolio → Add holdings manually
+       ↓
+6. Get AI Insights → Market analysis (Pro)
 ```
 
-### Portfolio API
-```json
-GET /api/portfolio?userId=user123
-POST /api/portfolio
-{
-  "action": "add",
-  "symbol": "BTC",
-  "quantity": 0.5,
-  "price": 50000
-}
+## 🔧 Custom Domain Setup
+
+1. Go to [Settings > Services](/?t=sites&s=services)
+2. Expand QuantAI service
+3. Add your custom domain in Custom Domains section
+4. Add DNS records:
+   - `CNAME www → jitenkumar.zo.space`
+   - Or `A record → Zo's IP`
+
+*Note: Requires paid plan*
+
+## 📁 Project Structure
+
+```
+QuantAI/
+├── src/
+│   ├── pages/          # React pages
+│   │   ├── index.tsx   # Landing page
+│   │   ├── dashboard.tsx
+│   │   └── pricing.tsx
+│   ├── api/            # API routes
+│   │   ├── signals.ts
+│   │   ├── auth.ts
+│   │   └── ...
+│   └── components/
+├── data/               # Persistent storage
+├── package.json
+└── README.md
 ```
 
-### AI Insights API (Pro+)
-```json
-GET /api/insights?symbol=bitcoin&tier=pro
-{
-  "success": true,
-  "insights": {
-    "symbol": "BTC",
-    "trend": "bullish",
-    "confidence": 75,
-    "price": 74000,
-    "analysis": "Strong upward momentum detected",
-    "support": 73000,
-    "resistance": 76000
-  }
-}
+## 🔐 API Endpoints
+
+### Public APIs (no auth needed)
+- `GET /api/signals` - Get trading signals
+- `GET /api/prices` - Get current prices
+- `GET /api/chart?symbol=bitcoin` - Get OHLCV data
+- `GET /api/insights?symbol=bitcoin` - Get AI insights
+
+### Authenticated APIs
+- `POST /api/auth` - Login/Signup
+- `GET /api/portfolio` - Get user portfolio
+- `POST /api/execute-trade` - Execute trade on Binance
+- `GET /api/stream?action=price&symbol=btcusdt` - Real-time price stream
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|-------|------------|
+| Frontend | React, Tailwind CSS |
+| Backend | Hono (Bun) |
+| Database | File-based JSON |
+| Market Data | CoinGecko API |
+| Trading | Binance Testnet |
+
+## 📈 To Make Production Ready
+
+```
+CURRENT             →  PRODUCTION
+─────────────────────────────────────────────
+In-memory users     →  PostgreSQL/MongoDB
+File storage        →  Cloud database
+Testnet trading     →  Real Binance API
+Free CoinGecko      →  Paid plan (higher limits)
+No payments         →  Stripe/Cashfree
+No notifications    →  Email/Telegram alerts
+Single server       →  Scalable infrastructure
 ```
 
-### Auto-Trade API (Pro+)
-```json
-GET /api/auto-trade?action=status
-POST /api/auto-trade?action=enable
-{
-  "symbol": "BTCUSDT",
-  "amount": 100,
-  "type": "MARKET",
-  "mode": "paper"
-}
-```
+## 🤝 Contributing
 
-### Enterprise API Access
-```json
-POST /api/enterprise?action=generate
-{
-  "email": "user@example.com",
-  "tier": "enterprise"
-}
-```
+1. Clone repo
+2. Make changes
+3. Push to GitHub
+4. Deploy via Zo Space
+
+## 📞 Support
+
+- Email: jitenkumar@zo.computer
+- GitHub Issues: https://github.com/jitenkr2030/QuantAI/issues
 
 ---
 
-## Technology Stack
-
-- **Frontend:** React + Tailwind CSS
-- **Backend:** Hono (Bun)
-- **Data Sources:** CoinGecko API (free), Binance Testnet
-- **Payments:** Stripe (ready for INR)
-
----
-
-## Business Model
-
-### Revenue Streams
-1. **Subscription Revenue** - Monthly/annual subscriptions
-2. **Signal Sales** - One-time signal packs
-3. **Enterprise API** - B2B API access
-4. **White-label** - Branded solutions for businesses
-
-### India-Focused Features
-- INR pricing (₹299, ₹1,499)
-- UPI & Indian payment methods ready
-- Localized support docs
-
----
-
-## Legal
-
-- **Terms of Service:** `/terms`
-- **Risk Disclaimer:** `/disclaimer`
-- Financial trading disclaimer prominently displayed
-
----
-
-## Roadmap
-
-- [x] Core platform
-- [x] Tier-based access
-- [x] Payment integration
-- [x] Legal pages
-- [ ] User dashboard with history
-- [ ] Real broker integration
-- [ ] Mobile app
-- [ ] Telegram/WhatsApp signal alerts
-
----
-
-*Last Updated: March 2026*
+*Built with ❤️ on Zo Computer*
