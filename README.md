@@ -1,109 +1,159 @@
-# QuantAI Research - SEBI Registered Research Analyst
+# QuantAI - SaaS for SEBI Registered Research Analysts
 
 ## 🚀 Live Platform: https://jitenkumar.zo.space
 
-## Overview
+---
 
-**QuantAI Research** is a SEBI Registered Research Analyst platform providing institutional-quality research reports, stock recommendations, and investment advisory services.
+## 🎯 What is QuantAI?
+
+**QuantAI** is a B2B SaaS platform that provides tools and software for **SEBI Registered Research Analysts** to manage their research advisory business.
 
 ---
 
-## 📋 SEBI Compliance
+## 🏛️ Business Model
 
-| Requirement | Status |
-|-------------|--------|
-| SEBI Registration | ✅ INH000001234 |
-| Disclaimer Display | ✅ On every page |
-| Fee Transparency | ✅ Listed clearly |
-| Client Registration | ✅ Email + Phone |
-| Audit Trail | ✅ Local storage |
+| Component | Description |
+|-----------|-------------|
+| **Target Customer** | SEBI Registered Research Analysts (RAs) |
+| **Value Proposition** | Everything needed to run a research advisory |
+| **Revenue Model** | SaaS subscription (₹2,999 - ₹19,999/month) |
 
 ---
 
-## 🏛️ SEBI RA Business Model
-
-### Services Offered
-
-1. **Stock Research Reports**
-   - Fundamental Analysis
-   - Technical Analysis
-   - Quarterly Earnings Review
-
-2. **Portfolio Advisory**
-   - Personalized Recommendations
-   - Risk Assessment
-   - Portfolio Diversification
-
-3. **Subscription Plans**
+## 💰 Subscription Plans
 
 | Plan | Price | Features |
 |------|-------|----------|
-| Basic | ₹999/month | 3 picks/month, Email support |
-| Premium | ₹4,999/quarter | 10 picks/month, Weekly calls |
-| Enterprise | ₹19,999/year | Unlimited, Dedicated RM |
+| **Starter** | ₹2,999/month | Up to 50 clients, 5 report templates, UPI payments |
+| **Growth** | ₹7,999/month | Up to 200 clients, unlimited reports, API access |
+| **Enterprise** | ₹19,999/month | Unlimited clients, white-label, custom domain |
 
 ---
 
-## 📄 Legal Compliance
+## 🛠️ Features for SEBI RAs
 
-### Required Disclosures
+### 1. Client Management
+- Track clients, subscriptions, renewal dates
+- Client portal with login
+- Email automation for renewals
 
-- SEBI Registration Number: INH000001234
-- Certificate Valid Till: December 2026
-- CIN: U67120MH2020PTC123456
-- "Investment in securities market are subject to market risks"
+### 2. Report Builder
+- Create SEBI-compliant research reports
+- Auto-insert disclaimers
+- PDF export with branding
 
-### Prohibited Practices (SEBI)
+### 3. Payment Collection
+- Accept UPI payments (QR codes)
+- Invoice generation
+- Revenue tracking
 
-- ❌ Guaranteed returns
-- ❌ Mis-selling
-- ❌ Unregistered advice
-- ❌ Insider trading
+### 4. Stock Research Tools
+- Fundamental analysis data
+- Technical charting
+- Sector comparisons
 
-### Allowed Practices (SEBI RA)
+### 5. Compliance Helper
+- Auto-disclaimer templates
+- Audit logs
+- SEBI compliance reports
 
-- ✅ Research reports for listed securities
-- ✅ Fee-based subscriptions
-- ✅ Risk disclosures
-- ✅ Professional recommendations
+### 6. White-Label
+- Your brand
+- Your domain
+- Your business
+
+---
+
+## 📋 SEBI RA Compliance Tools
+
+| Feature | Purpose |
+|---------|---------|
+| Disclaimer Auto-Insert | Required SEBI disclaimers on every report |
+| Audit Logs | Track who accessed what and when |
+| Document Storage | Store client agreements securely |
+| Compliance Reports | Generate SEBI-required reports |
+
+---
+
+## 👥 Target Users
+
+- Individual SEBI Registered Research Analysts
+- Small research advisory firms
+- Boutique investment advisors
+
+---
+
+## 📊 Market Opportunity (India)
+
+- ~1,500+ SEBI Registered Research Analysts
+- Average fee: ₹5,000-50,000/month per client
+- Total addressable market: ₹100+ Crores
 
 ---
 
 ## 🔧 Technical Stack
 
-- **Frontend**: React + Tailwind CSS
-- **Backend**: Zo Space API Routes
-- **Data**: CoinGecko API (market data)
-- **Payments**: UPI (Cashfree integration ready)
+| Component | Technology |
+|-----------|------------|
+| Frontend | React + Tailwind CSS |
+| Backend | Zo Space API Routes |
+| Database | Local Storage + Ready for DB |
+| Payments | UPI (Cashfree integration ready) |
 
 ---
 
-## 📊 Revenue Model
+## 📁 Project Structure
 
-| Revenue Stream | Monthly Potential |
-|----------------|-------------------|
-| Basic Subscriptions | ₹50,000 - ₹2,00,000 |
-| Premium Subscriptions | ₹1,00,000 - ₹5,00,000 |
-| Enterprise Clients | ₹5,00,000+ |
+```
+QuantAI/
+├── src/
+│   └── pages/
+│       ├── index.tsx      # Landing page
+│       ├── features.tsx   # Features page
+│       ├── pricing.tsx    # Pricing page
+│       ├── login.tsx     # Login page
+│       ├── register.tsx  # Registration page
+│       └── dashboard.tsx # RA Dashboard
+├── package.json
+├── README.md
+└── .gitignore
+```
 
 ---
 
 ## 🚀 Getting Started
 
-1. **Client Registration** → Dashboard registration form
-2. **Subscription Selection** → Choose plan
-3. **UPI Payment** → Pay via UPI QR code
-4. **Access Research** → View SEBI compliant reports
+1. **Register** → Sign up for free trial
+2. **Login** → Access dashboard
+3. **Add Clients** → Start managing clients
+4. **Create Reports** → Build SEBI-compliant reports
+5. **Collect Payments** → Receive UPI payments
+
+---
+
+## ⚠️ Important Disclaimers
+
+- QuantAI is a **SaaS platform**, not an investment advisor
+- All investment advice is provided by SEBI-registered advisors
+- QuantAI provides tools, not recommendations
+- Investment in securities market are subject to market risks
 
 ---
 
 ## 📱 Contact
 
-- **Email**: research@quantaifinance.in
-- **Phone**: +91 98765 43210
-- **Address**: Mumbai, Maharashtra, India
+- **Platform**: https://jitenkumar.zo.space
+- **GitHub**: https://github.com/jitenkr2030/QuantAI
+
+---
+
+## 🔄 Updates
+
+- **v2.0** - Complete pivot to B2B SaaS for SEBI RAs
+- New landing page with clear value proposition
+- Features, Pricing, Login, Register pages
+- RA Dashboard with client management
 
 ---
 
 *Last Updated: March 2026*
-*SEBI Registration Valid Till: December 2026*
