@@ -1,94 +1,89 @@
 # RAFlow - SaaS for SEBI Registered Research Analysts
 
-## 🚀 Live: https://jitenkumar.zo.space
+## Overview
 
----
+**RAFlow** is a B2B SaaS platform that helps SEBI Registered Research Analysts manage their advisory business.
 
-## 🎯 What is RAFlow?
+## The Business Model
 
-**RAFlow** is a B2B SaaS platform that provides tools for **SEBI Registered Research Analysts** to manage their research business.
+```
+┌─────────────────────────────────────────────────────┐
+│  You (SEBI Registered RA)                            │
+│                                                      │
+│  Pay ₹999-9,999/month to RAFlow (SaaS subscription) │
+│                                                      │
+│  Use RAFlow to:                                      │
+│  ✅ Manage your client list                          │
+│  ✅ Create professional research reports             │
+│  ✅ Track SEBI compliance                           │
+│  ✅ Generate invoices for YOUR clients               │
+│                                                      │
+│  YOUR CLIENTS pay YOU directly                       │
+│  (You charge ₹5,000-50,000/month per client)        │
+│                                                      │
+│  Your Profit = Client Fees - RAFlow Fee              │
+└─────────────────────────────────────────────────────┘
+```
 
----
+## Live Platform
 
-## 💼 Business Model
+- **Website**: https://jitenkumar.zo.space
+- **Landing**: `/`
+- **Features**: `/features`
+- **Pricing**: `/pricing`
+- **Dashboard (Demo)**: `/dashboard`
+- **Login**: `/login`
+- **Register**: `/register`
 
-| Aspect | Details |
-|--------|---------|
-| **We Are** | SaaS Tool Provider |
-| **Our Customers** | SEBI Registered Research Analysts |
-| **NOT** | Investment Advisor (Our customers are) |
+## Pages
 
----
+| Route | Type | Description |
+|-------|------|-------------|
+| `/` | Public | Landing page with business model explanation |
+| `/features` | Public | Features list for SEBI RAs |
+| `/pricing` | Public | RAFlow pricing plans (₹999-9,999/mo) |
+| `/login` | Private | User login |
+| `/register` | Private | User registration with 14-day trial |
+| `/dashboard` | Public | Demo dashboard with full UI |
+| `/clients` | Private | Client management module |
+| `/reports` | Private | Research report builder |
+| `/compliance` | Private | SEBI compliance tracker |
+| `/billing` | Private | Invoicing and billing |
 
-## 🛠️ Tools for SEBI RAs
+## Features
 
-| Feature | Description |
-|---------|-------------|
-| **Client Management** | Track clients, subscriptions, renewals |
-| **Report Builder** | Create SEBI-compliant research reports |
-| **Payment Collection** | Accept UPI, cards, bank transfers |
-| **Compliance Helper** | Auto-disclaimers, audit logs |
-| **Stock Research** | Fundamental & technical analysis |
-| **White-Label** | RA's brand, domain, business |
+- **Client Management** - Add, track, and manage all your clients
+- **Report Builder** - Create professional research reports with charts
+- **Compliance Tracker** - Automated SEBI compliance documentation
+- **Client Portal** - Secure access for your clients
+- **Billing & Invoicing** - Generate professional invoices
+- **Email Delivery** - Send reports directly to clients
 
----
+## Revenue Model
 
-## 💰 Revenue Model
+### RA Flow (SaaS Provider)
+- Revenue: User subscriptions ₹999-9,999/month
+- Cost: Platform maintenance
 
-| Source | Amount |
-|--------|--------|
-| **SaaS Subscriptions** | ₹2,999 - ₹19,999/month |
-| **Target Market** | ~1,500 SEBI RAs in India |
-| **TAM** | ₹100+ Crores |
+### Research Analyst (Customer)
+- Cost to RAFlow: ₹999-9,999/month
+- Revenue from clients: ₹5,000-50,000/client/month
+- Profit potential: Huge margin
 
----
+## Tech Stack
 
-## 📱 Pages
+- Zo Space (Frontend)
+- React + TypeScript
+- Tailwind CSS
+- CoinGecko API (market data)
 
-| Page | URL | Purpose |
-|------|-----|---------|
-| **Home** | `/` | Landing page |
-| **Features** | `/features` | Tool features |
-| **Pricing** | `/pricing` | ₹2,999-₹19,999/month |
-| **Login** | `/login` | RA login |
-| **Register** | `/register` | Start free trial |
-| **Dashboard** | `/dashboard` | RA dashboard |
+## Getting Started
 
----
+1. Visit https://jitenkumar.zo.space
+2. Click "Start Free Trial" to register
+3. Access the dashboard and explore features
+4. Add your clients and start creating reports
 
-## ⚠️ Compliance Notice
+## License
 
-- "RAFlow is a SaaS platform, not an investment advisor"
-- "All investment advice is provided by SEBI-registered advisors"
-- "We provide tools, not recommendations"
-
----
-
-## 🛠️ Tech Stack
-
-- **Frontend**: React + TypeScript + Tailwind CSS
-- **Backend**: Node.js APIs
-- **Data**: CoinGecko (free market data)
-- **Hosting**: Zo Space
-
----
-
-## 📊 GitHub
-
-**Repository**: https://github.com/jitenkr2030/QuantAI
-
----
-
-## 🔜 Roadmap
-
-- [ ] Add real payment gateway (Razorpay/Cashfree)
-- [ ] Add database for client management
-- [ ] Add email automation
-- [ ] Add bulk client import
-- [ ] Add white-label for RAs
-- [ ] Add custom domain support
-- [ ] Add mobile app
-
----
-
-*Last Updated: March 2026*
+Proprietary - All rights reserved
