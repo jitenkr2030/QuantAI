@@ -1,115 +1,94 @@
-# RAFlow - SaaS for SEBI Research Analysts
+# RAFlow - SaaS for SEBI Registered Research Analysts
 
-## 🏛️ What is RAFlow?
+## Overview
 
-**RAFlow** is a B2B SaaS platform built for **SEBI Registered Research Analysts** in India. We help RAs manage compliance, clients, and generate SEBI-compliant reports - all in one place.
+RAFlow is a B2B SaaS platform built for **solo SEBI Registered Research Analysts** in India. It helps you manage clients, generate SEBI-compliant reports, track compliance, and run your research business - all in one place.
 
----
+## Features
 
-## ✅ Features Implemented
+### Core Modules
 
-### 1. 📈 NSE/BSE Market Data Integration
-- **API**: `/api/market-data?symbol=RELIANCE`
-- Real-time stock prices from NSE/BSE
-- Watchlist support
-- Price, change, volume, market cap, P/E ratio
-- 52-week high/low data
+| Module | Description |
+|--------|-------------|
+| **Dashboard** | Overview of business metrics, client stats, compliance alerts |
+| **Client Management** | Track clients, subscriptions, renewal dates |
+| **Report Builder** | Generate SEBI-compliant research reports |
+| **Portfolio Tracking** | Track client portfolios and P/L |
+| **Market Data** | NSE/BSE stock prices and watchlist |
+| **Compliance Calendar** | SEBI deadlines and task tracking |
+| **Billing & Invoicing** | GST-compliant invoices, payment tracking |
 
-### 2. 📄 SEBI-Compliant Report Generation
-- **API**: `/api/sebi-report`
-- Auto-generates reports with mandatory SEBI disclosures
-- Includes analyst certification
-- Risk disclosure section
-- Conflict of interest declaration
-- Download as PDF format
+### Revenue Model (You Sell to RAs)
 
-### 3. 📱 WhatsApp Alerts
-- **API**: `/api/whatsapp-alert`
-- Send research updates to clients
-- Instant market alerts
-- Template-based messaging
-- Ready for WhatsApp Business API integration
+| Plan | Price | Features |
+|------|-------|----------|
+| Starter | Rs. 999/mo | 10 clients, basic reports |
+| Professional | Rs. 2,499/mo | 50 clients, WhatsApp alerts |
+| Enterprise | Rs. 4,999/mo | Unlimited clients, API access |
 
-### 4. ✅ Compliance Calendar
-- **API**: `/api/compliance`
-- Tracks all SEBI deadlines
-- Monthly, quarterly, annual compliance tasks
-- Penalty warnings
-- NISM certification tracking
-- System audit reminders
+### Target Customers
 
-### 5. 👥 Client Management & Invoicing
-- **Client API**: `/api/clients`
-- **Invoice API**: `/api/invoice`
-- Track client subscriptions
-- Generate GST-compliant invoices
-- UPI/Bank transfer payment details
-- Renewal reminders
+- Individual SEBI RAs with 10-500 clients
+- Research teams at small broking houses
+- Financial bloggers wanting to monetize research
 
----
+## Quick Wins Implemented
 
-## 💰 Pricing (India-Market)
+1. **NSE/BSE Market Data** - Free API integration
+2. **SEBI-Compliant Reports** - Auto-generated with disclosures
+3. **WhatsApp Alerts** - Send updates to clients
+4. **Compliance Calendar** - Track SEBI deadlines
+5. **Client Management** - Track subscriptions & renewals
+6. **Portfolio Tracking** - Monitor client holdings
+7. **Report Builder** - Generate research reports
 
-| Plan | Price | Target |
-|------|-------|--------|
-| Starter | ₹999/mo | New RAs |
-| Pro | ₹2,999/mo | Growing RAs |
-| Enterprise | ₹9,999/mo | RA Firms |
-
----
-
-## 🔧 Tech Stack
+## Tech Stack
 
 - **Frontend**: React + TypeScript
-- **Styling**: Tailwind CSS (mobile-first)
 - **Backend**: Hono.js API routes
-- **Hosting**: Zo Space
-- **Data**: Yahoo Finance / NSE BSE APIs
+- **Data**: CoinGecko (crypto), Yahoo Finance (stocks)
+- **Deployment**: Zo Space (jitenkumar.zo.space)
+
+## Live URLs
+
+- Landing: https://jitenkumar.zo.space/
+- Dashboard: https://jitenkumar.zo.space/dashboard
+- Features: https://jitenkumar.zo.space/features
+- Pricing: https://jitenkumar.zo.space/pricing
+
+## Getting Started
+
+1. Register at https://jitenkumar.zo.space/register
+2. Login to dashboard
+3. Add your SEBI registration details
+4. Start managing clients
+
+## SEBI Compliance Built-In
+
+- Analyst certification display
+- Risk disclosure statements
+- Conflict of interest declaration
+- Performance history disclosure
+- Monthly/quarterly report generation
+- Annual compliance certificate
+
+## For Developers
+
+```bash
+# Clone the repo
+git clone https://github.com/jitenkr2030/QuantAI.git
+
+# Install dependencies
+bun install
+
+# Run locally
+bun run dev
+```
+
+## License
+
+Proprietary - All rights reserved
 
 ---
 
-## 📊 Competitive Advantage
-
-| Feature | RAFlow | Global Tools |
-|---------|--------|--------------|
-| SEBI Compliance | ✅ Native | ❌ None |
-| Price | ₹999-9,999/mo | $500+/mo |
-| Mobile-First | ✅ Yes | ❌ Desktop |
-| GST Invoicing | ✅ India | ❌ Global |
-
----
-
-## 🚀 Quick Start
-
-1. Visit `/dashboard` - Main dashboard
-2. Visit `/market` - NSE/BSE data
-3. Visit `/pricing` - Plans & pricing
-4. Visit `/register` - Create account
-
----
-
-## 📋 SEBI Compliance Checklist (Built-in)
-
-- [x] Analyst Certification
-- [x] Risk Disclosure
-- [x] Conflict of Interest Declaration
-- [x] Performance History Disclosure
-- [x] Monthly/Quarterly Reports
-- [x] Annual Compliance Certificate
-
----
-
-## 🔗 API Endpoints
-
-| Endpoint | Method | Description |
-|----------|--------|-------------|
-| `/api/market-data` | GET | NSE/BSE stock data |
-| `/api/sebi-report` | GET | Generate compliance report |
-| `/api/compliance` | GET | Get compliance tasks |
-| `/api/clients` | GET | List all clients |
-| `/api/invoice` | GET | Generate invoice |
-| `/api/whatsapp-alert` | POST | Send WhatsApp alert |
-
----
-
-*Built for SEBI Research Analysts in India 🇮🇳*
+*Built with Zo Computer*
