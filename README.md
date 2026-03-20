@@ -1,89 +1,115 @@
-# RAFlow - SaaS for SEBI Registered Research Analysts
+# RAFlow - SaaS for SEBI Research Analysts
 
-## Overview
+## 🏛️ What is RAFlow?
 
-**RAFlow** is a B2B SaaS platform that helps SEBI Registered Research Analysts manage their advisory business.
+**RAFlow** is a B2B SaaS platform built for **SEBI Registered Research Analysts** in India. We help RAs manage compliance, clients, and generate SEBI-compliant reports - all in one place.
 
-## The Business Model
+---
 
-```
-┌─────────────────────────────────────────────────────┐
-│  You (SEBI Registered RA)                            │
-│                                                      │
-│  Pay ₹999-9,999/month to RAFlow (SaaS subscription) │
-│                                                      │
-│  Use RAFlow to:                                      │
-│  ✅ Manage your client list                          │
-│  ✅ Create professional research reports             │
-│  ✅ Track SEBI compliance                           │
-│  ✅ Generate invoices for YOUR clients               │
-│                                                      │
-│  YOUR CLIENTS pay YOU directly                       │
-│  (You charge ₹5,000-50,000/month per client)        │
-│                                                      │
-│  Your Profit = Client Fees - RAFlow Fee              │
-└─────────────────────────────────────────────────────┘
-```
+## ✅ Features Implemented
 
-## Live Platform
+### 1. 📈 NSE/BSE Market Data Integration
+- **API**: `/api/market-data?symbol=RELIANCE`
+- Real-time stock prices from NSE/BSE
+- Watchlist support
+- Price, change, volume, market cap, P/E ratio
+- 52-week high/low data
 
-- **Website**: https://jitenkumar.zo.space
-- **Landing**: `/`
-- **Features**: `/features`
-- **Pricing**: `/pricing`
-- **Dashboard (Demo)**: `/dashboard`
-- **Login**: `/login`
-- **Register**: `/register`
+### 2. 📄 SEBI-Compliant Report Generation
+- **API**: `/api/sebi-report`
+- Auto-generates reports with mandatory SEBI disclosures
+- Includes analyst certification
+- Risk disclosure section
+- Conflict of interest declaration
+- Download as PDF format
 
-## Pages
+### 3. 📱 WhatsApp Alerts
+- **API**: `/api/whatsapp-alert`
+- Send research updates to clients
+- Instant market alerts
+- Template-based messaging
+- Ready for WhatsApp Business API integration
 
-| Route | Type | Description |
-|-------|------|-------------|
-| `/` | Public | Landing page with business model explanation |
-| `/features` | Public | Features list for SEBI RAs |
-| `/pricing` | Public | RAFlow pricing plans (₹999-9,999/mo) |
-| `/login` | Private | User login |
-| `/register` | Private | User registration with 14-day trial |
-| `/dashboard` | Public | Demo dashboard with full UI |
-| `/clients` | Private | Client management module |
-| `/reports` | Private | Research report builder |
-| `/compliance` | Private | SEBI compliance tracker |
-| `/billing` | Private | Invoicing and billing |
+### 4. ✅ Compliance Calendar
+- **API**: `/api/compliance`
+- Tracks all SEBI deadlines
+- Monthly, quarterly, annual compliance tasks
+- Penalty warnings
+- NISM certification tracking
+- System audit reminders
 
-## Features
+### 5. 👥 Client Management & Invoicing
+- **Client API**: `/api/clients`
+- **Invoice API**: `/api/invoice`
+- Track client subscriptions
+- Generate GST-compliant invoices
+- UPI/Bank transfer payment details
+- Renewal reminders
 
-- **Client Management** - Add, track, and manage all your clients
-- **Report Builder** - Create professional research reports with charts
-- **Compliance Tracker** - Automated SEBI compliance documentation
-- **Client Portal** - Secure access for your clients
-- **Billing & Invoicing** - Generate professional invoices
-- **Email Delivery** - Send reports directly to clients
+---
 
-## Revenue Model
+## 💰 Pricing (India-Market)
 
-### RA Flow (SaaS Provider)
-- Revenue: User subscriptions ₹999-9,999/month
-- Cost: Platform maintenance
+| Plan | Price | Target |
+|------|-------|--------|
+| Starter | ₹999/mo | New RAs |
+| Pro | ₹2,999/mo | Growing RAs |
+| Enterprise | ₹9,999/mo | RA Firms |
 
-### Research Analyst (Customer)
-- Cost to RAFlow: ₹999-9,999/month
-- Revenue from clients: ₹5,000-50,000/client/month
-- Profit potential: Huge margin
+---
 
-## Tech Stack
+## 🔧 Tech Stack
 
-- Zo Space (Frontend)
-- React + TypeScript
-- Tailwind CSS
-- CoinGecko API (market data)
+- **Frontend**: React + TypeScript
+- **Styling**: Tailwind CSS (mobile-first)
+- **Backend**: Hono.js API routes
+- **Hosting**: Zo Space
+- **Data**: Yahoo Finance / NSE BSE APIs
 
-## Getting Started
+---
 
-1. Visit https://jitenkumar.zo.space
-2. Click "Start Free Trial" to register
-3. Access the dashboard and explore features
-4. Add your clients and start creating reports
+## 📊 Competitive Advantage
 
-## License
+| Feature | RAFlow | Global Tools |
+|---------|--------|--------------|
+| SEBI Compliance | ✅ Native | ❌ None |
+| Price | ₹999-9,999/mo | $500+/mo |
+| Mobile-First | ✅ Yes | ❌ Desktop |
+| GST Invoicing | ✅ India | ❌ Global |
 
-Proprietary - All rights reserved
+---
+
+## 🚀 Quick Start
+
+1. Visit `/dashboard` - Main dashboard
+2. Visit `/market` - NSE/BSE data
+3. Visit `/pricing` - Plans & pricing
+4. Visit `/register` - Create account
+
+---
+
+## 📋 SEBI Compliance Checklist (Built-in)
+
+- [x] Analyst Certification
+- [x] Risk Disclosure
+- [x] Conflict of Interest Declaration
+- [x] Performance History Disclosure
+- [x] Monthly/Quarterly Reports
+- [x] Annual Compliance Certificate
+
+---
+
+## 🔗 API Endpoints
+
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/api/market-data` | GET | NSE/BSE stock data |
+| `/api/sebi-report` | GET | Generate compliance report |
+| `/api/compliance` | GET | Get compliance tasks |
+| `/api/clients` | GET | List all clients |
+| `/api/invoice` | GET | Generate invoice |
+| `/api/whatsapp-alert` | POST | Send WhatsApp alert |
+
+---
+
+*Built for SEBI Research Analysts in India 🇮🇳*
